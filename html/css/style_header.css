@@ -1,0 +1,39 @@
+/* ============================================================
+    STYLESHEET - Header (Page-Top)
+============================================================ */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.2rem 1rem;
+    padding: 1rem;
+    background: linear-gradient(to bottom right, #00ddff, #ff00fb);
+    border-radius: 10px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .header-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+  }
+  .user-header {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+  }
+  
+  .search-bar {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 200px;
+    margin: 0;
+    padding: 20px;
+  }
+  

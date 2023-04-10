@@ -1,0 +1,42 @@
+/* ============================================================
+    STYLESHEET - Navigation Bar
+============================================================ */
+
+header {
+    position: relative;
+    height: 100px;
+  }
+  
+  h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  nav {
+    position: absolute;
+    bottom: 0;
+    top: 50px;
+    padding: 20px;
+    margin-top: 30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.2);
+    background: linear-gradient(326deg, #00ffbd, #7300ff, #d800ff, #00f5ff);}
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  

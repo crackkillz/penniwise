@@ -1,0 +1,191 @@
+@import "/css/style_base.css";
+@import "/css/style_header.css";
+@import "/css/style_nav.css";
+@import "/css/style_player.css";
+@import "/css/style_footer.css";
+@import "/img/upslash.jpg";
+
+/* Reset styles */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  background: animated-gradient(            
+    to bottom right, #5500ff00, #00000000);
+}
+
+.banner {
+  position: relative;
+  font-display: flex;
+  padding: auto;
+  margin: 30px;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background: linear-gradient(326deg, #00ffbd, #7300ff, #d800ff, #00f5ff);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    -o-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 43%}
+    50%{background-position:100% 58%}
+    100%{background-position:0% 43%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 43%}
+    50%{background-position:100% 58%}
+    100%{background-position:0% 43%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 43%}
+    50%{background-position:100% 58%}
+    100%{background-position:0% 43%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 43%}
+    50%{background-position:100% 58%}
+    100%{background-position:0% 43%}
+}
+
+
+a {
+  display: flex;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  color: #ae00ff;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.content {
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(to bottom right, #121212, #1a1a1a);
+  border-radius: 10px;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.song {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 12rem;
+  padding: 4rem;
+  background: linear-gradient(to bottom right, #00ddff, #ff00fb);
+  border-radius: 10px;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer a:hover {
+  color: #c4c4c4;
+}
+
+.btn {
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  background: linear-gradient(to bottom right, #121212, #1a1a1a);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #c4c4c4;
+  color: #000;
+  cursor: pointer;
+}
+
+.btn:active {
+  background: #ae00ff;
+  color: #fff;
+}
+
+.upload-form {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 800px;
+  HEIGHT: 500px;
+  font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  line-height: 1.5;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background: linear-gradient(            
+    to bottom right, #02000000, #00000000);
+  border-radius: 10px;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.upload-form input {
+  display: block;
+  margin: 1rem auto;
+  padding: .5rem;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid #ae00ff;
+  border-radius: 5px;
+}
+
+.login-form {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  line-height: 1.5;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background: linear-gradient(            
+    to bottom right, #00ff7b00, #00000000);
+  border-radius: 10px;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
