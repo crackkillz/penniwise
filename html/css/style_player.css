@@ -1,0 +1,190 @@
+body {
+    overflow: hidden;
+    background: linear-gradient(326deg, #00ffbd, #7300ff, #d800ff, #00f5ff);
+  }
+  
+  
+  #controls {
+    display: flex;
+    padding: 15px;
+  }
+  #controls .btn {
+    position: relative;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+  }
+  #controls .btn .fa {
+    width: 16px;
+    pointer-events: none;
+  }
+  #controls .btn .fa.off {
+    color: #00eeff;
+    opacity: 0.4;
+  }
+  #controls .btn:active {
+    transform: scale(0.9);
+  }
+  #controls .btn.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+  }
+  
+  #flex-pad {
+    flex: 1;
+  }
+  
+  #background.loading + #loader #spinner {
+    -webkit-animation: spinner-anim 2s ease-out infinite;
+            animation: spinner-anim 2s ease-out infinite;
+  }
+  #background.loading + #loader #spinner::before {
+    -webkit-animation: spinner-anim 2s ease-out infinite;
+            animation: spinner-anim 2s ease-out infinite;
+  }
+  #background.loading + #loader #spinner::after {
+    -webkit-animation: spinner-anim 1s ease-out infinite;
+            animation: spinner-anim 1s ease-out infinite;
+  }
+  
+  #loader {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  #loader #loading-text {
+    font-size: 1.8em;
+    font-family: "Josefin Sans", sans-serif;
+    color: #69cdd7;
+    transition: all 0.5s ease-in-out;
+  }
+  #loader #spinner {
+    height: 40px;
+    width: 40px;
+    border: 2px solid #efefef;
+    border-color: transparent transparent #69cdd7 #69cdd7;
+    border-radius: 50%;
+    margin-right: 10px;
+    transform: rotate(0deg);
+  }
+  #loader #spinner::before, #loader #spinner::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border: 2px solid #000000;
+    border-color: transparent transparent #00eaff #8c00ff;
+    border-radius: 50%;
+  }
+  #loader #spinner::before {
+    top: 3px;
+    left: 3px;
+    height: 30px;
+    width: 30px;
+  }
+  #loader #spinner::after {
+    top: 8px;
+    left: 8px;
+    height: 20px;
+    width: 20px;
+  }
+  
+  #canvas, #glow-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #canvas {
+    z-index: 1;
+  }
+  
+  #glow-layer {
+    z-index: 0;
+  }
+  
+  #codepen-link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    z-index: 10;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/logo.jpg");
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.4;
+    transition: all 0.25s;
+  }
+  #codepen-link:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 6px #efefef;
+  }
+  
+  #progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 4px;
+    background: #69cdd7;
+    transform: scaleX(0);
+    transform-origin: center left;
+    transition: transform 0.5s linear;
+  }
+  
+  .make-google-happy-button {
+    position: absolute;
+    padding: 1rem 1rem 0.8rem 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 4;
+    border: 1px solid #69cdd7;
+    color: #00eaff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  .make-google-happy-button:hover {
+    background: #69cdd7;
+    color: #9000ff;
+  }
+  .make-google-happy-button.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    color: #00b3ff;
+  }
+  
+  @media screen and (min-width: 600px) {
+    #header {
+      flex-direction: row;
+    }
+  
+    #controls {
+      padding: 0;
+    }
+  }
+  @-webkit-keyframes spinner-anim {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spinner-anim {
+    to {
+      transform: rotate(360deg);
+    }
+  }
