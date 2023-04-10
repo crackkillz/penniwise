@@ -189,3 +189,35 @@ a:hover {
   border-radius: 10px;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
+
+.col-md-8 {
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  background: linear-gradient(326deg,  #7300ffc4, #00ff33, #dd00ff, #00aeff);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.col-md-8 li a {
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  text-align: left
+
+}
+
+.social-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
