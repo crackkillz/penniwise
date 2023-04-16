@@ -29,8 +29,8 @@ body {
 
 .banner {
   position: flex;
-  margin: 2rem;
-  padding: 2;
+  margin: 1rem;
+  padding: 1;
   color: #ffffff;
   text-decoration: none;
   margin: 0 0px;
@@ -78,13 +78,15 @@ body {
 
 
 a {
-  display: flex;
+  display: block;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
-  color: #ae00ff;
+  color: #00ff2a;
   text-decoration: none;
   text-align: center;
-}
+  top: left;
+  padding: auto;
+  }
 
 a:hover {
   text-decoration: underline;
@@ -227,7 +229,7 @@ a:hover {
 
 .social-links {
   display: flex;
-  list-style: none;
+  list-style: inside;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -242,8 +244,7 @@ h2 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
-  margin: 5rem;
+  margin: 2rem;
+  padding-top: 3rem;
   color: #ffffff;
-  text-shadow: #00ff33 #00ddff #ae00ff;
-  
 }
