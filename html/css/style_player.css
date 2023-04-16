@@ -1,9 +1,4 @@
-body {
-    overflow: hidden;
-    background: linear-gradient(326deg, #00ffbd, #7300ff, #d800ff, #00f5ff);
-  }
-  
-  
+
   #controls {
     display: flex;
     padding: 15px;
@@ -99,7 +94,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    overflow: hidden;
     height: 100vh;
     width: 100vw;
   }

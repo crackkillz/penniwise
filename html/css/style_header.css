@@ -6,11 +6,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.2rem 1rem;
-    padding: 1rem;
+    margin: 0.2rem;
+    height: 1000px;
+    padding: 0.1rem;
     background: linear-gradient(to bottom right, #00ddff, #ff00fb);
     border-radius: 10px;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.5rem 1rem rgba(0, 174, 255, 0.2);
   }
   
   .header-container {
@@ -18,7 +19,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: white;
+    background-color: rgb(0, 255, 81);
   }
   .user-header {
     display: flex;

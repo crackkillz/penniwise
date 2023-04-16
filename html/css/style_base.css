@@ -16,17 +16,27 @@
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
-  color: #fff;
-  background: animated-gradient(            
-    to bottom right, #5500ff00, #00000000);
+  padding: 1rem;
+  margin: 1rem;
+  line-height: 1;
+  background: linear-gradient(326deg, #00ffbd, #7300ff, #d800ff, #00f5ff);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
 }
 
 .banner {
-  position: relative;
-  font-display: flex;
-  padding: auto;
-  margin: 30px;
+  position: flex;
+  margin: 2rem;
+  padding: 2;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 0px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .background {
@@ -192,8 +202,8 @@ a:hover {
 
 .col-md-8 {
   margin: auto;
-  width: 70%;
-  padding: 10px;
+  width: 100%;
+  padding: 5px;
   background: linear-gradient(326deg,  #7300ffc4, #00ff33, #dd00ff, #00aeff);
   background-size: 800% 800%;
   -webkit-animation: AnimationName 30s ease infinite;
@@ -202,6 +212,8 @@ a:hover {
   animation: AnimationName 30s ease infinite;
   text-align: left;
   border-radius: 20px;
+  border-color: #00d9ff;
+  box-shadow: #00f5ff #00ff33 #7300ff;
 }
 
 .col-md-8 li a {
@@ -220,4 +232,18 @@ a:hover {
   align-items: center;
   padding: 1rem;
   border-radius: 10px;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin: 5rem;
+  color: #ffffff;
+  text-shadow: #00ff33 #00ddff #ae00ff;
+  
 }
