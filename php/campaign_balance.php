@@ -1,30 +1,21 @@
 <?php
-// Replace this with your database credentials
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "database_name";
+// Get the selected song and the wallet balance from the form
+$song = $_POST['song_select'];
+$wallet_balance = $_POST['wallet_balance'];
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Calculate the maximum amount that can be funded for the campaign
+$max_fund = $wallet_balance / 2;
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+// Get the campaign fund from the form and validate it
+$campaign_fund = $_POST['campaign_fund'];
+if ($campaign_fund > $max_fund) {
+	echo "Error: Campaign fund cannot be greater than half of wallet balance.";
+	exit();
 }
 
-// Query the database for the campaign balance
-$sql = "SELECT campaign_balance FROM users WHERE id = 1"; // Replace "users" with your table name and "id" with the user ID of the currently logged in user
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  // Output the campaign balance value
-  $row = $result->fetch_assoc();
-  $campaign_balance = $row["campaign_balance"];
-  echo "<script>var balance = " . $campaign_balance . ";</script>";
-} else {
-  echo "No campaign balance found.";
-}
-
-$conn->close();
+// Create the campaign and deduct the campaign fund from the wallet balance
+$campaign_name = $song . "_campaign";
+$new_wallet_balance = $wallet_balance - $campaign_fund;
+echo "Campaign \"$campaign_name\" has been created with a fund of $campaign_fund. Your new wallet balance is $new_wallet_balance.";
 ?>
+-----

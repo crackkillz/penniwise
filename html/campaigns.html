@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./css/style_header.css">
     <link rel="stylesheet" href="./css/style_nav.css">
     <link rel="stylesheet" href="./css/style_player.css">
-  </head>
-  <body>
+</head>   
+<body>
     <header>
       <a href="index.html"><h1>PenniWise</h1></a>
       <nav class="nav">
@@ -32,19 +32,26 @@
         <a href="profile.html"><img class="user-avatar" src="default-avatar.jpg" width="32px" height="32px"></a>
         <a href="wallet.html">$0.00</a>      
       </div>
-    </header>
-    <form class="upload-form" action="#" method="post">
-      <ui><input type="file" name="upload" accept=".mp3, .wav, .ogg," multiple placeholder="Upload Song or Album mp3 wav or ogg">Upload Song</ui>
-      <ui><input type="file" name="albumArt" accept=".jpg, .png," placeholder="Album Art">Album Art</ui>
-      <ui><input type="text" name="song-title" placeholder="Song Title"></ui>
-      <input type="text" name="artist" placeholder="Artist"></ui>
-      <button type="submit">Upload</button>
+    </header>   
+    <div class="campaign">    
+    <h2>Create a Campaign</h2>
+    <form method="post" action="campaign.php">
+        <label for="song_select">Select a Song:</label>
+        <select name="song_select" id="song_select">
+            <option value="song1">Song 1</option>
+            <option value="song2">Song 2</option>
+            <option value="song3">Song 3</option>
+        </select>
+        <br><br>
+        <label for="wallet_balance">Wallet Balance:</label>
+        <input type="text" name="wallet_balance" id="wallet_balance">
+        <br><br>
+        <label for="campaign_fund">Campaign Fund:</label>
+        <input type="text" name="campaign_fund" id="campaign_fund">
+        <br><br>
+        <input type="submit" value="Create Campaign">
     </form>
-  </body>
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 PenniWise. All rights reserved.</p>
-    </div>
-  </footer>
-  </html>
-  
+    </div>    
+    <div><iframe src="footer.html" style="width: 100%; height: 100%; border: none;"></iframe></div>
+</body>
+</html>
